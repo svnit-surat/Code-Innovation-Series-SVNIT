@@ -8,7 +8,7 @@ DESCRIPTION :
 
 In this project we have made a doubts solving platform like discussion forum in which students can
 ask their doubts occured during online classes of different subjects to the respective teacher. So that
-the student's doubts can be solved effective on time using technique called communication threads.
+the student's doubts can be solved in time effective manner using technique called communication threads.
 
 Why this app is different?
 
