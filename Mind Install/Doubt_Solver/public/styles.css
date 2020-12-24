@@ -1,0 +1,11 @@
+.link{
+    text-align: end;
+    margin: 10px;    
+    font-size: 20px;
+}
+
+form{    
+    margin: 30px;
+    
+    display: inline-block;
+}
