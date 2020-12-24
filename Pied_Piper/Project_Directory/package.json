@@ -1,5 +1,5 @@
 {
-  "name": "pied_piper_version_beta_hackathon",
+  "name": "pied_piper_remote_medicare",
   "version": "1.0.0",
   "description": "Remote Medicare",
   "main": "src/server/index.js",
