@@ -35,14 +35,14 @@ def load_tasks():
 def save_tasks():
     tasks = listbox_tasks.get(0, listbox_tasks.size())
     listbox_tasks.delete(0, tkinter.END)
-    pickle.dump(tasks, open('tasks.docx', 'wb'))
+    pickle.dump(tasks, open('tasks.docx', 'rb+'))
 
 
 # create GUI
 frame_tasks = tkinter.Frame(root)
 frame_tasks.pack()
 
-listbox_tasks = tkinter.Listbox(frame_tasks, height=10, width=50, bg='pink')
+listbox_tasks = tkinter.Listbox(frame_tasks, height=10, width=50, bg='#aaa')
 listbox_tasks.pack(side=tkinter.LEFT)
 
 scrollbar_tasks = tkinter.Scrollbar(frame_tasks)
@@ -54,13 +54,13 @@ scrollbar_tasks.config(command=listbox_tasks.yview)
 entry_task = tkinter.Entry(root, width=50)
 entry_task.pack()
 
-button_add_task = tkinter.Button(root, text='Add task', width=48, command=add_task, bg='blue', fg='white')
+button_add_task = tkinter.Button(root, text='Add task', width=48, command=add_task, bg='blue', )
 button_add_task.pack()
 
-button_delete_task = tkinter.Button(root, text='Delete task', width=48, command=delete_task, bg='red', fg='white')
+button_delete_task = tkinter.Button(root, text='Delete task', width=48, command=delete_task, bg='crimson')
 button_delete_task.pack()
 
-button_load_tasks = tkinter.Button(root, text='Load tasks', width=48, command=load_tasks, bg='yellow')
+button_load_tasks = tkinter.Button(root, text='Load tasks', width=48, command=load_tasks, bg='green')
 button_load_tasks.pack()
 
 button_save_tasks = tkinter.Button(root, text='Save tasks', width=48, command=save_tasks, bg='cyan')
