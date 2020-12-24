@@ -27,6 +27,11 @@ app.get('/home', (req, res) => {
     res.render('query', { username });
 });
 
+app.post('/home', (req, res) => {
+    console.log("Question ", req.body)
+    res.redirect('/home');
+})
+
 io.on('connection', (socket) => {
     console.log(`${username} connected`);
     socket.on('chat message', (msg) => {
