@@ -27,9 +27,9 @@
                         <div class="modal-body">
                             <form method="POST" action="/home">
                                 <div class="form-row">
-                                <lable for="question" class="col-form-lable">Enter your question</lable>
+                                <lable for="query" class="col-form-lable">Enter your question</lable>
                                 
-                                    <textarea type="text" class="form-control" id="question" name="question" placeholder="Enter your question" row="12"></textarea>
+                                    <textarea type="text" class="form-control" id="query" name="query" placeholder="Enter your question" row="12"></textarea>
                                 
                                 </div>
                                 <div class="form-row">
@@ -45,7 +45,7 @@
 
         <div class="container">
             <div class="row-content">                
-                <h2>Welcome <%= username %>, Click on the subject in which you have doubts</h2>
+                <h2>Welcome <%= username %>, click on the subject in which you have doubts</h2>
                 <hr>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
@@ -65,7 +65,7 @@
                 <div class="tab-content card-body">
                     <div role="tabpanel" class="tab-pane fade show active" id="physics">
                         <h3>Proff. name <small>HOD in Physics</small></h3>                        
-                        <div class="main-thread card card-body bg-light blockquote">
+                        <div id ="physics_1" class="main-thread card card-body bg-light blockquote">
                             <p class="mb-0">
                                 thread1 i have some huge doubts to be solved?
                             </p>
@@ -153,6 +153,6 @@
         </script>
         <script src="script.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
-        <script type="module" src="socket.js"></script>
+        <script src="socket.js"></script>
     </body>
 </html>

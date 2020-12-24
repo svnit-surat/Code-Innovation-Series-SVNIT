@@ -34,8 +34,11 @@ app.post('/home', (req, res) => {
 
 io.on('connection', (socket) => {
     console.log(`${username} connected`);
-    socket.on('chat message', (msg) => {
-        console.log('message: ' + msg);
+    socket.on('new thread', (msg) => {
+        io.emit('new thread', msg);
+    });
+    socket.on('reply thread', (msg) => {
+        io.emit('reply thread', msg);
     });
     socket.on('disconnect', () => {
         console.log(`${username} disconnected`);
