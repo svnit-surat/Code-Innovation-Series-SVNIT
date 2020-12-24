@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>chatbot</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <form method = "post" action = "">
+            <!-- adding hidden text -->
+            {{ form.hidden_tag() }}
+            {{ form.message.label() }}
+            {{ form.message }}
+            
+            {{ form.submit() }}
+            {{ form.clear() }}
+        </form>
+
+        {% for m in me %}
+            <p> {{ m }} </p>
+        {% endfor %}
+
+    </body>
+</html>
