@@ -39,6 +39,8 @@ def save_tasks():
 
 
 # create GUI
+team_name= tkinter.Label(root,text='TO DO LIST from Algoritm Unlock',font=('calibri',20)).pack()
+
 frame_tasks = tkinter.Frame(root)
 frame_tasks.pack()
 
