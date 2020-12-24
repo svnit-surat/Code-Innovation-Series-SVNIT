@@ -28,7 +28,7 @@ namespace _10minstut
 
 
 
-            string token = "NzkwNzc3NTgzNjU0MjczMDM0.X-FjAw.iORGOPqVhE0gfbd_UOU26YULGAE";
+            string token = "TOKEN FOR THE BOT";
 
             _client.Log += _client_Log;
 
