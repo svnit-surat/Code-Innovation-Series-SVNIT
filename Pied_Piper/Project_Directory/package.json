@@ -1,7 +1,7 @@
 {
   "name": "pied_piper_version_beta_hackathon",
   "version": "1.0.0",
-  "description": "Project for Version Beta Hackathon",
+  "description": "Remote Medicare",
   "main": "src/server/index.js",
   "scripts": {
     "build": "webpack --mode production",
