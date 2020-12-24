@@ -33,9 +33,11 @@ app.post('/home', (req, res) => {
 })
 
 io.on('connection', (socket) => {
+    console.log({username});
     console.log(`${username} connected`);
+    
     socket.on('new thread', (msg) => {
-        io.emit('new thread', msg);
+        io.emit('new thread', msg, {username});
     });
     socket.on('reply thread', (msg) => {
         io.emit('reply thread', msg);
