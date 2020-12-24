@@ -15,6 +15,10 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/home', (req, res) => {
+    res.render('query');
+});
+
 io.on('connection', (socket) => {
     console.log('A new user connected');
     socket.on('disconnect', () => {
