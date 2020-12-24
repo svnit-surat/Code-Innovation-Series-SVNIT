@@ -1,0 +1,45 @@
+RUNTIME TERROR
+
+TOPIC:VIRTUAL LABORATORIES
+
+BRIEF DESCRIPTION
+This project will help students who cannot access physical laboratories to sit at home and understand the working of experiments.
+This website will be a user friendly one where students can learn and see various experiments virtually.
+
+PROTOTYPE
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><font size="92">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VIRTUAL LAB</font></h1>
+    <br><br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="Virtual Labs.html">About</a>
+    <br><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="https://www.talentlms.com/blog/wp-content/uploads/2016/09/virtual-labs-in-elearning.png" alt="">
+    <br><br><br>
+    
+    <h3>Introduction</h3>
+    <p>This is virtual lab.Its purpose is to cater to the stutends who are unable to peform experiments for any reason. Web enabled experiments can be designed for remote operation and viewing so as to enthuse the curiosity and innovation into students. This would help in learning basic and advanced concepts through remote experimentation. </p>
+    <br>
+     <h3>Objective</h3>
+     <p>1. To provide remote-access to Labs in various disciplines of Science and Engineering. These Virtual Labs would cater to
+    students at the undergraduate level, post graduate level as well as to research scholars. <br>
+    2. To enthuse students to conduct experiments by the arousing their curiosity. This would help them in learning basic and
+    advanced concepts through remote experimentation.
+    To provide a complete Learning Management System around the Virtual Labs where the students can avail the various tools
+    for learning, including additional web-resources, video-lectures, animated demonstrations and self evaluation. <br>
+    3. To share costly equipment and resources, which are otherwise available to limited number of users due to constraints on
+    time and geographical distances.</p>
+    <a href="#top">back to top</a>
+    <p>Click <a href="file:///C:/Users/priyanshi/Desktop/ohmslaw.html"> here for a short description about ohms law</a></p>
+    <p> Here is a simulation of OHMS LAW experiment for you where you can get to change the voltage and resistance and get the value of current accordingly.
+        To start the simulation click <a href="file:///C:/Users/priyanshi/Downloads/ohms-law_en.html">HERE</a></p>
+
+</body>
+</html>
