@@ -1,3 +1,4 @@
-function enterName(){
-    $("#entername").modal('show');
+function question(){
+    $("#question").modal('show');
 }
+
