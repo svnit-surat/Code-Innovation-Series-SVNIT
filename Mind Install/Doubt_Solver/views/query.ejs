@@ -61,9 +61,9 @@
                     <div role="tabpanel" class="tab-pane fade show active" id="physics">
                         <h3>Proff. name <small>HOD in Physics</small></h3>                        
                         <div class="text-right">
-                            <button type="submit" class="btn btn-outline-primary" >
-                                <a data-toggle="modal" onclick="question()">
-                                    create new thread
+                            <button id="physicsMainThread" type="submit" class="btn btn-outline-primary" >
+                                <a data-toggle="modal" onclick=question()>
+                                    New Conversation
                                 </a>
                             </button>
                         </div>
@@ -160,9 +160,9 @@
                     <div role="tabpanel" class="tab-pane fade" id="mathematics">
                         <h3>Proff. name <small>HOD in Mathematics</small></h3>
                         <div class="text-right">
-                            <button type="submit" class="btn btn-outline-primary" >
-                                <a data-toggle="modal" onclick="question()">
-                                    create new thread
+                            <button id="mathsMainThread" type="submit" class="btn btn-outline-primary" >
+                                <a onclick="question()">
+                                    New Conversation
                                 </a>
                             </button>
                         </div>
@@ -171,9 +171,9 @@
                     <div role="tabpanel" class="tab-pane fade" id="chemisty">
                         <h3>Proff. name <small>HOD in Chemisty</small></h3>
                         <div class="text-right">
-                            <button type="submit" class="btn btn-outline-primary" >
-                                <a data-toggle="modal" onclick="question()">
-                                    create new thread
+                            <button id="chemistryMainThread" type="submit" class="btn btn-outline-primary" >
+                                <a onclick="question()">
+                                    New Conversation
                                 </a>
                             </button>
                         </div>
@@ -182,9 +182,9 @@
                     <div role="tabpanel" class="tab-pane fade" id="computer">
                         <h3>Proff. name <small>HOD in Computer</small></h3>
                         <div class="text-right">
-                            <button type="submit" class="btn btn-outline-primary" >
-                                <a data-toggle="modal" onclick="question()">
-                                    create new thread
+                            <button id="computer" type="submit" class="btn btn-outline-primary" >
+                                <a onclick="question()">
+                                    New Conversation
                                 </a>
                             </button>
                         </div>
@@ -204,8 +204,8 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
             crossorigin="anonymous">
         </script>
-        <script src="script.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
+        <script src="script.js"></script>
         <script src="socket.js"></script>
     </body>
 </html>
