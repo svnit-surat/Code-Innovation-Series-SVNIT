@@ -15,8 +15,35 @@
     <Body>
         <header class="container">
             <div class="link">            
-                <a href="index.html">logout</a>
+            <a data-toggle="modal" onclick="enterName()">Enter Name</a>             
             </div>
+
+<div id="entername" class="modal show" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <div class="modalheader">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Enter Your Name</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">                                    
+                            <lable for="name" class="">Name</lable>
+                            <div>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                            </div>                    
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1">Ok</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         </header>
 
         <div class="container">
