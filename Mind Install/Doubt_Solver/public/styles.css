@@ -3,9 +3,24 @@
     margin: 10px;    
     font-size: 20px;
 }
-
-form{    
-    margin: 30px;
+.modal-content{
+    padding: 20px;
+    text-align: center;
     
-    display: inline-block;
+}
+
+.btn {
+    margin: 5px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.entername{
+    width: 100%;
+    margin: 300px;
+    padding: 0;
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-right: auto;
+    margin-left: auto;
 }
