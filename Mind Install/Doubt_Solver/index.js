@@ -33,21 +33,12 @@ app.post('/home', (req, res) => {
 })
 
 io.on('connection', (socket) => {
+    console.log(username);
     console.log(`${username} connected`);
-
-    socket.on('new physics thread', (msg) => {
-        io.emit('new physics thread', msg);
-    });
-    socket.on('new maths thread', (msg) => {
-        io.emit('new physics thread', msg);
-    });
-    socket.on('new chemistry thread', (msg) => {
-        io.emit('new physics thread', msg);
-    });
-    socket.on('new computer thread', (msg) => {
-        io.emit('new physics thread', msg);
-    });
     
+    socket.on('new thread', (msg) => {
+        io.emit('new thread', msg, {username});
+    });
     socket.on('reply thread', (msg) => {
         io.emit('reply thread', msg);
     });

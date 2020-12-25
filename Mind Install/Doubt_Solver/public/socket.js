@@ -8,10 +8,13 @@ $(document).ready(function() {
             $('#query').val('');
             return false;
         });
-        socket.on('new thread', function(msg){
+        socket.on('new thread', function(msg, username){            
             let newMsg = '<div class="main-thread card card-body bg-light blockquote">' +
-                        '<p class="mb-0">thread1 '+msg+'</p>' +
-                        '<div class="blockquote-footer">student name, time</div></div>'
+                            '<p class="mb-0">'+msg+'</p>' +
+                        '<div class="blockquote-footer">' + username['username'] + ', time</div>' +
+                        '<div class="text-right"><button type="submit" class="btn btn-outline-primary" >'+
+                        '<a data-toggle="modal" onclick="question()">Reply</a>'+
+                        '</button>&nbsp;&nbsp;&nbsp;&nbsp; 30 &uarr; upvotes</div></div>'
             $('#physics').append(newMsg);
         });
         socket.on('reply thread', function(msg){
