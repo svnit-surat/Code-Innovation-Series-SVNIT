@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+		<link rel="stylesheet" href="build/conversational-form-docs.min.css">
+		<script type="text/javascript" src="https://cf-4053.kxcdn.com/conversational-form/0.9.6/conversational-form.min.js" crossorigin></script>
+	</head>
+	<body>
+		<style>
+			.custom-template{
+				font-size:12px;
+				color:red;
+			}
+		</style>
+
+		<main class="content">
+			<menu id="small-screen-menu">
+
+
+				<div class="switch-btn" id="cf-toggle-btn" data-label="Enable Conversational Form" data-label-toggled="Disable Conversational Form">
+					<label class="switch">
+						<input type="checkbox" onclick="window.conversationalFormExamples.toggleConversation(event)">
+						<div class="slider round"></div>
+					</label>
+				</div>
+			</menu>
+
+
+
+			<section id="info" role="info">
+
+
+				<article>
+					<h1 id="writer">
+						Welcome to Pied Piper
+					</h1>
+				</article>
+			</section>
+
+			<section role="form">
+				<div class="form-outer">
+
+
+					<form id="form">
+						<input
+							id="123"
+							name="123"
+							type="text"
+							cf-questions="Good Morning Sahil, I will help you to fill your daily health record"
+                        />
+
+					<form id="form">
+						<input
+							id="123"
+							name="123"
+							type="text"
+							cf-questions="How are you feeling today?"
+                        />
+
+                        <form id="form">
+                            <input
+                                id="123"
+                                name="123"
+                                type="text"
+                                cf-questions="Did you took your medication?"
+                        />
+
+                        <form id="form">
+                            <input
+                                id="123"
+                                name="123"
+                                type="text"
+                                cf-questions="Your weight"
+						/>
+
+						<form id="form">
+                            <input
+                                id="123"
+                                name="123"
+                                type="text"
+                                cf-questions="For how many hours did you slept last time?"
+                        />
+
+                        <form id="form">
+                            <input
+                                id="123"
+                                name="123"
+                                type="text"
+                                cf-questions="Your blood sugar level (in mg/dL)"
+                        />
+
+                        <form id="form">
+                            <input
+                                id="123"
+                                name="123"
+                                type="text"
+                                cf-questions="Are you feeling sick?"
+                        />
+
+                        <form id="form">
+                            <input
+                                id="123"
+                                name="123"
+                                type="text"
+                                cf-questions="Do you want to contact a doctor?"
+						/>
+
+						<form id="form">
+                            <input
+                                id="123"
+                                name="123"
+                                type="text"
+                                cf-questions="Thank you!"
+                        />
+
+					</form>
+
+				</div>
+			</section>
+
+			<section id="cf-context" role="cf-context" cf-context>
+
+			</section>
+		</main>
+
+		<script>
+			function initExample(){
+				var dispatcher = new cf.EventDispatcher(),
+					synth = null,
+					recognition = null,
+					msg = null,
+					SpeechRecognition = null;
+
+				try{
+					SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+				}catch(e){
+					console.log("Example support range: https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition#Browser_compatibility");
+				}
+
+
+				if(SpeechRecognition){
+					var microphoneInput = {
+						init: function() {
+							console.log("voice: init method called from mic integration");
+						},
+						awaitingCallback: false,
+						cancelInput: function() {
+							console.log("voice: CANCEL")
+							finalTranscript = null;
+							if(recognition){
+								recognition.onend = null;
+								recognition.onerror = null;
+								recognition.stop();
+							}
+						},
+						input: function(resolve, reject, mediaStream) {
+							console.log("voice: INPUT")
+
+
+							if(recognition)
+								recognition.stop();
+
+							recognition = new SpeechRecognition(),
+								finalTranscript = '';
+
+							recognition.continuous = false;
+							recognition.interimResults = false;
+
+
+							recognition.onresult = function(event) {
+								for (var i = event.resultIndex; i < event.results.length; ++i) {
+									if (event.results[i].isFinal) {
+										finalTranscript += event.results[i][0].transcript;
+									}
+								}
+							}
+
+							recognition.onerror = function(event) {
+								reject(event.error);
+							}
+
+							recognition.onend = function(event) {
+								if(finalTranscript && finalTranscript !== ""){
+									resolve(finalTranscript);
+								}
+							}
+
+							recognition.start();
+						}
+					}
+				}
+
+				var conversationalForm = window.cf.ConversationalForm.startTheConversation({
+					formEl: document.getElementById("form"),
+					context: document.getElementById("cf-context"),
+					eventDispatcher: dispatcher,
+
+					microphoneInput: microphoneInput,
+
+					submitCallback: function(){
+						console.log("voice: Form submitted...", conversationalForm.getFormData(true));
+
+					}
+				});
+
+				if(!SpeechRecognition){
+					conversationalForm.addRobotChatResponse("SpeechRecognition not supported, so <strong>no</strong> Microphone here.");
+				}
+			};
+		</script>
+
+		<script src="build/conversational-form-examples.min.js" id="examples-script"></script>
+	</body>
+</html>
