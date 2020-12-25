@@ -1,0 +1,51 @@
+                                                                    AUTOMATE
+                               a step towards online learning…….
+DESCRIPTION:
+                   Our project consits of a AUTOMATE Desktop application and a Python FACE TRACKER script
+
+
+AUTOMATE Desktop application:
+          AUTOMATE is a Desktop  startup application which always runs in background helping students to attend the meeting on time. Student just have to schedule his time table in the application ,he can also change from time to time. Student have to give their meeting links to the application. It is very helpful for the student who doesn’t want to miss a class.
+
+
+FEATURES:
+1)Automatically opens the class meet link at scheduled time in the chrome browser.
+2)student recieves a desktop notification before every class at the scheduled time.
+3)Student can link our application with their twilio account to get a direct SMS  to their phone at scheduled time.
+
+
+
+python Face Tracker script:
+Its for class holders on google meet.Teachers can get a information whether students are watching the screen.It can also be used while conducting examinations.
+
+FEATURES :
+1)We will fix a face tracker which makes sure that students are in front of screen.
+2)It notifies the teacher if any student is not paying attention or not.
+3)This will create a environment of online exam same as that in offline mode, no need of continuous vigilance of any student.
+4)This will also allow students' have privacy, if they wish to not share their video input to the classroom during classes.
+                       
+
+Contents of our project directory:
+1.frontend1 - frontend code of automate application developed with Tkinter GUI Toolkit
+2.twilio1 - python backend for adding twilio account
+3.practice3 - python backend for other gui interfaces,consits of scheduling the classes
+4.icons - icons used in frontend1(Tkinter GUI)
+5.facetracker - python code for face tracking.
+6.harcascade_frontalface_default - xml code for storing and posistioning face tracking data
+
+
+Hosting in local server:
+Automate application:
+      a desktop application takes input from user through Tkinter gui toolkit .
+Takes input in a simple three step process to schedule their each day.
+first step - selecting a day.
+second step - adding time,subject name and meet link.
+third step - to schedule the notification time and submit the results.
+one more step - to add their twilio accounts and get a direct notification to the registered mobile.
+any sql server can be used to store the data for particular day and can retrieve it to use it in the backend code of python
+
+
+Facetracker script :
+it is used to track the face through camera .
+developed with python and xml(harcascade)
+              
