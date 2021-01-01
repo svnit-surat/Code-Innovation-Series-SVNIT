@@ -13,36 +13,13 @@
         <title>Raise Your Doubts</title>
     </head>
     <body>
-        <header class="container">            
-            <div id="question" class="modal fade" role="dialog">
-                <div class="modal-dialog modal-lg" role="content">
-                    <div class="modal-content">
-                        <div class="modalheader">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Ask Your Doubts</h4>
-                        </div>
-                        <div class="modal-body">
-                            <form method="POST" action="/home">
-                                <div class="form-row">
-                                    <lable for="query" class="col-form-lable">Enter your question</lable>                                
-                                    <textarea type="text" class="form-control" id="query" name="query" placeholder="Enter your question" row="12"></textarea>                                
-                                </div>                                
-                                <div class="form-row">
-                                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                                    <button type="submit" class="btn btn-primary btn-sm ml-1">Ok</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <header class="container">
+            <h2>Welcome <%= username %>, click on the subject in which you have doubts</h2>
         </header>
-
+        <hr>
         <div class="container">
             <div class="row-content">                
-                <h2>Welcome <%= username %>, click on the subject in which you have doubts</h2>
-                <hr>
-                <!-- <ul class="nav nav-tabs">
+                <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" href="#physics" role="tab" data-toggle="tab">Physics</a>
                     </li>
@@ -55,52 +32,41 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#computer" role="tab" data-toggle="tab">Computer</a>
                     </li>
-                </ul>                 -->
+                </ul>
                 <div class="card">
                 <div class="tab-content card-body">
                     <div role="tabpanel" class="tab-pane fade show active" id="physics">
                         <h3>Proff. name <small>HOD in Physics</small></h3>                        
-                        <div class="text-right">
-                            <button id="physicsMainThread" type="submit" class="btn btn-outline-primary" >
-                                <a data-toggle="modal" onclick=question()>
-                                    New Conversation
-                                </a>
-                            </button>
+                        <div id="physicsMainThread">
+                               <!--  main thread posts -->
+                               
                         </div>
-                    </div>                   
+                        <%- include("questionFrom.ejs") %>
+                    </div>                 
                     <div role="tabpanel" class="tab-pane fade" id="mathematics">
                         <h3>Proff. name <small>HOD in Mathematics</small></h3>
-                        <div class="text-right">
-                            <button id="mathsMainThread" type="submit" class="btn btn-outline-primary" >
-                                <a onclick="question()">
-                                    New Conversation
-                                </a>
-                            </button>
+                        <div id="mathsMainThread">                            
+                               <!--  main thread posts -->
+                               
                         </div>
-                        
+                        <%- include("questionFrom.ejs") %>                        
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="chemisty">
                         <h3>Proff. name <small>HOD in Chemisty</small></h3>
-                        <div class="text-right">
-                            <button id="chemistryMainThread" type="submit" class="btn btn-outline-primary" >
-                                <a onclick="question()">
-                                    New Conversation
-                                </a>
-                            </button>
+                        <div id="chemistryMainThread">
+                               <!--  main thread posts -->
+                               
                         </div>
-                        
+                        <%- include("questionFrom.ejs") %>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="computer">
                         <h3>Proff. name <small>HOD in Computer</small></h3>
-                        <div class="text-right">
-                            <button id="computer" type="submit" class="btn btn-outline-primary" >
-                                <a onclick="question()">
-                                    New Conversation
-                                </a>
-                            </button>
+                        <div id="computerMainThread">
+                               <!--  main thread posts -->
+                               
                         </div>
-                        
-                    </div>
+                        <%- include("questionFrom.ejs") %>
+                    </div>                    
                 </div>                
             </div>            
         </div>

@@ -1,3 +1,3 @@
-function question(){
+function questionfun(){
     $("#question").modal('show');
 }
