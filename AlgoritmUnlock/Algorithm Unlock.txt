@@ -1,0 +1,18 @@
+Description 
+We have developed To-Do list app which will help students and working professionals to manage their time more productively. By our app, they can look forward to their daily goals. They can prioritize their daily task in a better way.
+It will bring structure to everyone's routine. This will help to reduce anxiety in people's lives by doing things in an organized way.
+Our app help everyone to delegate and relieve stress by making them feel productive. The act of writing down our tasks hold us accountable to get them done.
+
+Contents of the directory:
+1. Python file
+2. Presentation file(.pptx)
+3. Text file
+
+Ways to host the project:
+1. Github 
+2. Code editiors:
+a. Python IDLE
+b. Visual studio code
+c. Atom 
+d. Sublime text
+e. pycharm
