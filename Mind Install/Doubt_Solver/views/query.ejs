@@ -41,7 +41,16 @@
                                <!--  main thread posts -->
                                
                         </div>
-                        <%- include("questionFrom.ejs") %>
+                        <form id="newFormPhysics" class="form" method="POST" action="/home">
+                            <div class="form-row">
+                                <div class="col-12 col-lg-10 col-sm-10">
+                                    <input type="text" class="form-control mb-2 mr-sm-2" id="query" name="askQuery" placeholder="Enter your question"></input>        
+                                </div>
+                                <div class="col col-lg-2 col-sm">
+                                    <button type="submit" class="btn btn-primary mb-2">Send</button>
+                                </div>
+                            </div>
+                        </form>                        
                     </div>                 
                     <div role="tabpanel" class="tab-pane fade" id="mathematics">
                         <h3>Proff. name <small>HOD in Mathematics</small></h3>
@@ -49,7 +58,16 @@
                                <!--  main thread posts -->
                                
                         </div>
-                        <%- include("questionFrom.ejs") %>                        
+                        <form id="newFormMaths" class="form" method="POST" action="/home">
+                            <div class="form-row">
+                                <div class="col-12 col-lg-10 col-sm-10">
+                                    <input type="text" class="form-control mb-2 mr-sm-2" id="query" name="askQuery" placeholder="Enter your question"></input>        
+                                </div>
+                                <div class="col col-lg-2 col-sm">
+                                    <button type="submit" class="btn btn-primary mb-2">Send</button>
+                                </div>
+                            </div>
+                        </form>                          
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="chemisty">
                         <h3>Proff. name <small>HOD in Chemisty</small></h3>
@@ -57,7 +75,16 @@
                                <!--  main thread posts -->
                                
                         </div>
-                        <%- include("questionFrom.ejs") %>
+                        <form id="newFormChemistry" class="form" method="POST" action="/home">
+                            <div class="form-row">
+                                <div class="col-12 col-lg-10 col-sm-10">
+                                    <input type="text" class="form-control mb-2 mr-sm-2" id="query" name="askQuery" placeholder="Enter your question"></input>        
+                                </div>
+                                <div class="col col-lg-2 col-sm">
+                                    <button type="submit" class="btn btn-primary mb-2">Send</button>
+                                </div>
+                            </div>
+                        </form>        
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="computer">
                         <h3>Proff. name <small>HOD in Computer</small></h3>
@@ -65,7 +92,16 @@
                                <!--  main thread posts -->
                                
                         </div>
-                        <%- include("questionFrom.ejs") %>
+                        <form id="newFormComps" class="form" method="POST" action="/home">
+                            <div class="form-row">
+                                <div class="col-12 col-lg-10 col-sm-10">
+                                    <input type="text" class="form-control mb-2 mr-sm-2" id="query" name="askQuery" placeholder="Enter your question"></input>        
+                                </div>
+                                <div class="col col-lg-2 col-sm">
+                                    <button type="submit" class="btn btn-primary mb-2">Send</button>
+                                </div>
+                            </div>
+                        </form>        
                     </div>                    
                 </div>                
             </div>            
@@ -82,7 +118,6 @@
             crossorigin="anonymous">
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
-        <script src="script.js"></script>
         <script src="socket.js"></script>
     </body>
 </html>

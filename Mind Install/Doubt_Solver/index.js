@@ -36,11 +36,15 @@ io.on('connection', (socket) => {
     console.log(username);
     console.log(`${username} connected`);
     
-    socket.on('new thread', (msg) => {
-        io.emit('new thread', msg, {username});
+    socket.on('new thread', payload => {
+        const newPayload = {
+            ...payload,
+            username
+        };
+        io.emit('new thread', newPayload);
     });
-    socket.on('reply thread', (msg) => {
-        io.emit('reply thread', msg);
+    socket.on('reply thread', payload => {
+        io.emit('reply thread', payload);
     });
     socket.on('disconnect', () => {
         console.log(`${username} disconnected`);
