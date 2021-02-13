@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+            crossorigin="anonymous"
+        >
+        <link href="styles.css" rel="stylesheet">
+
+        <title>Raise Your Doubts</title>
+    </head>
+    <body>
+        <header class="container">
+            <h2>Welcome <%= username %>, click on the subject in which you have doubts</h2>
+        </header>
+        <hr>
+        <div class="container">
+            <div class="row-content">                
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#physics" role="tab" data-toggle="tab">Physics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mathematics" role="tab" data-toggle="tab">Mathematics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#chemisty" role="tab" data-toggle="tab">Chemisty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#computer" role="tab" data-toggle="tab">Computer</a>
+                    </li>
+                </ul>
+                <div class="card">
+                <div class="tab-content card-body">
+                    <div role="tabpanel" class="tab-pane fade show active" id="physics">
+                        <h3>Proff. name <small>HOD in Physics</small></h3>                        
+                        <div id="physicsMainThread">
+                               <!--  main thread posts -->
+                               
+                        </div>
+                        <form id="newFormPhysics" class="form" method="POST" action="/home">
+                            <div class="form-row">
+                                <div class="col-12 col-lg-10 col-sm-10">
+                                    <input type="text" class="form-control mb-2 mr-sm-2" id="query" name="askQuery" placeholder="Enter your question"></input>        
+                                </div>
+                                <div class="col col-lg-2 col-sm">
+                                    <button type="submit" class="btn btn-primary mb-2">Send</button>
+                                </div>
+                            </div>
+                        </form>                        
+                    </div>                 
+                    <div role="tabpanel" class="tab-pane fade" id="mathematics">
+                        <h3>Proff. name <small>HOD in Mathematics</small></h3>
+                        <div id="mathsMainThread">                            
+                               <!--  main thread posts -->
+                               
+                        </div>
+                        <form id="newFormMaths" class="form" method="POST" action="/home">
+                            <div class="form-row">
+                                <div class="col-12 col-lg-10 col-sm-10">
+                                    <input type="text" class="form-control mb-2 mr-sm-2" id="query" name="askQuery" placeholder="Enter your question"></input>        
+                                </div>
+                                <div class="col col-lg-2 col-sm">
+                                    <button type="submit" class="btn btn-primary mb-2">Send</button>
+                                </div>
+                            </div>
+                        </form>                          
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="chemisty">
+                        <h3>Proff. name <small>HOD in Chemisty</small></h3>
+                        <div id="chemistryMainThread">
+                               <!--  main thread posts -->
+                               
+                        </div>
+                        <form id="newFormChemistry" class="form" method="POST" action="/home">
+                            <div class="form-row">
+                                <div class="col-12 col-lg-10 col-sm-10">
+                                    <input type="text" class="form-control mb-2 mr-sm-2" id="query" name="askQuery" placeholder="Enter your question"></input>        
+                                </div>
+                                <div class="col col-lg-2 col-sm">
+                                    <button type="submit" class="btn btn-primary mb-2">Send</button>
+                                </div>
+                            </div>
+                        </form>        
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="computer">
+                        <h3>Proff. name <small>HOD in Computer</small></h3>
+                        <div id="computerMainThread">
+                               <!--  main thread posts -->
+                               
+                        </div>
+                        <form id="newFormComps" class="form" method="POST" action="/home">
+                            <div class="form-row">
+                                <div class="col-12 col-lg-10 col-sm-10">
+                                    <input type="text" class="form-control mb-2 mr-sm-2" id="query" name="askQuery" placeholder="Enter your question"></input>        
+                                </div>
+                                <div class="col col-lg-2 col-sm">
+                                    <button type="submit" class="btn btn-primary mb-2">Send</button>
+                                </div>
+                            </div>
+                        </form>        
+                    </div>                    
+                </div>                
+            </div>            
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+            crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+            crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
+        <script src="socket.js"></script>
+    </body>
+</html>
