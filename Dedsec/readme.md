@@ -1,4 +1,4 @@
-Discord Bot
+Asterix - Discord Bot
 
 A simple discord bot which has the following commands:
 1.Sit: It will remind you to sit straight while gaming every 15 minutes.
